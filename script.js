@@ -8,11 +8,11 @@ const addProduct = () => {
 
 
 };
-const getStoredCart = (){
+const getStoredCart = () => {
     const storedCart = localStorage.getItem("cart");
     let cart = {};
     if (storedCart) {
-
+        cart = JSON.parse(storedCart);  
     }
     else {
         return cart;
