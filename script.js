@@ -8,4 +8,13 @@ const addProduct = () => {
 
 
 };
-// const cart = { pen: 4, tripod: 2, handSanitizer: 2 }
+const getStoredCart = (){
+    const storedCart = localStorage.getItem("cart");
+    let cart = {};
+    if (storedCart) {
+
+    }
+    else {
+        return cart;
+    }
+}
