@@ -13,9 +13,6 @@ const getStoredCart = () => {
     let cart = {};
     if (storedCart) {
         cart = JSON.parse(storedCart)
-        return cart;
     }
-    else {
-        return cart;
-    }
-}
+    return cart;
+};
