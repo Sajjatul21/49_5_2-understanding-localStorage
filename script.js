@@ -1,10 +1,8 @@
 const addProduct = () => {
     const product = document.getElementById("product").value;
     const quentity = document.getElementById("quentity").value;
-    console.log(product, quentity);
-    const cart = getStoredCart();
-    cart[product] = quentity;
-    localStorage.setItem("cart", JSON.stringify(cart))
+
+    addProductToDB(product, quentity);
 
 
 };
@@ -16,3 +14,8 @@ const getStoredCart = () => {
     }
     return cart;
 };
+const addProductToDB = (product, quentity) => {
+    const cart = getStoredCart();
+    cart[product] = quentity;
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
